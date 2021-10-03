@@ -58,6 +58,11 @@ done
 [root@localhost onizuka]# echo 'blacklist nouveau' >> /etc/modprobe.d/modprobe.conf
 [root@localhost onizuka]# echo 'blacklist nouveau' >> /etc/modprobe.d/nouveau_blacklist.conf
 
+
+
+sudo bash NVIDIA-Linux-x86_64-470.74.run
+
+
 ```
 
 
