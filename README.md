@@ -75,4 +75,20 @@ $ lspci -nnk -d 10de:0fb9
 	Kernel modules: snd_hda_intel
 ```
 
+# 5. Install KVM and Vagrant
+```
+$ sudo yum install qemu-kvm qemu-img libvirt virt-install
+$ sudo systemctl start libvirtd
+$ virsh list
+$ sudo yum install virt-manager
+$ sudo virt-manager 
+
+$ sudo yum install -y yum-utils
+$ sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+$ sudo yum -y install vagrant
+$ vagrant plugin list
+$ vagrant plugin install libvirt
+$ sudo yum -y install vagrant-libvirt
+
+```
 
