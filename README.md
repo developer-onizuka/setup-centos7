@@ -78,6 +78,8 @@ $ lspci -nnk -d 10de:0fb9
 # 5. Install KVM and Vagrant
 ```
 $ sudo yum install qemu-kvm qemu-img libvirt virt-install
+$ sudo yum install qemu libvirt-devel ruby-devel
+
 $ sudo systemctl start libvirtd
 $ virsh list
 $ sudo yum install virt-manager
@@ -87,8 +89,6 @@ $ sudo yum install -y yum-utils
 $ sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
 $ sudo yum -y install vagrant
 $ vagrant plugin list
-$ vagrant plugin install libvirt
-$ sudo yum -y install vagrant-libvirt
-
+$ CONFIGURE_ARGS="with-libvirt-include=/usr/include/libvirt with-libvirt-lib=/usr/lib64" vagrant plugin install vagrant-libvirt
 ```
 
