@@ -51,6 +51,13 @@ Found initrd image: /boot/initramfs-3.10.0-1160.el7.x86_64.img
 Found linux image: /boot/vmlinuz-0-rescue-277d0a7f3e6741c79fe8f42aa3bec61b
 Found initrd image: /boot/initramfs-0-rescue-277d0a7f3e6741c79fe8f42aa3bec61b.img
 done
+
+
+[root@localhost onizuka]# mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
+[root@localhost onizuka]# dracut --omit-drivers nouveau /boot/initramfs-$(uname -r).img $(uname -r)
+[root@localhost onizuka]# echo 'blacklist nouveau' >> /etc/modprobe.d/modprobe.conf
+[root@localhost onizuka]# echo 'blacklist nouveau' >> /etc/modprobe.d/nouveau_blacklist.conf
+
 ```
 
 
